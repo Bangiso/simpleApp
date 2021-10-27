@@ -1,0 +1,1 @@
+curl -X POST -H "Content-Type: application/json"  -d '{"id":5,"name":"Leo","gpa":70}' https://localhost:7141/Students
