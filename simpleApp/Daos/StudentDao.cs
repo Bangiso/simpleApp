@@ -11,7 +11,7 @@ namespace simpleApp.Daos
 
         private readonly ILogger<StudentDao> _logger;
         private readonly List<Student> students = new List<Student>();
-        private static string connStr = "server=localhost;user=user;password=user;database=StudentDB";
+        private static string connStr = "server=localhost;user=root;password=test1234;database=StudentDB";
         private  static MySqlConnection conn = new MySqlConnection(connStr);
 
         public StudentDao(){

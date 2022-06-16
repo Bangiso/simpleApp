@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using simpleApp.Daos;
 using  simpleApp.Models;
 using  simpleApp.Services;
+using Microsoft.Extensions.Logging;
 
 namespace simpleApp.Controllers
 {
@@ -21,6 +22,19 @@ namespace simpleApp.Controllers
         {
             _logger = logger;
             _studanetDao = studanetDao;
+        }
+        [HttpGet("/")]
+        public ContentResult Index()
+        {
+         return  new ContentResult {
+                                  ContentType = "text/html",
+                                  Content = @"<h1> See the following routes</h1>
+                                  <div> <span style='color:grey;'> GET</span>  /students/all </div>
+                                  <div> <span style='color:grey;'> GET</span> /students/{id} </div>
+                                  <div> <span style='color:grey;'> POST</span> /students   {'id':5,'name':'Leo','gpa':70}'</div>
+                                  <div> <span style='color:grey;'> PUT</span> /students/{id}   {'id':5,'name':'Leo','gpa':70}'</div>
+                                  <div> <span style='color:grey;'> DELETE</span> /students/{id} </div> "
+                              };
         }
 
         [HttpGet("all")]
@@ -63,4 +77,3 @@ namespace simpleApp.Controllers
         }
     }
 }
-

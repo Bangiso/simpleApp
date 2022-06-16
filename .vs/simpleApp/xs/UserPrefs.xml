@@ -1,23 +1,22 @@
 ﻿<Properties StartupConfiguration="{FC719EC3-1821-4449-A29F-AF0C26DE8BBF}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="simpleApp/appsettings.Development.json">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workbench ActiveDocument="simpleApp/Program.cs">
     <Files>
-      <File FileName="simpleApp/Controllers/WeatherForecastController.cs" Line="12" Column="7" />
-      <File FileName="simpleApp/WeatherForecast.cs" Line="12" Column="2" />
-      <File FileName="simpleApp/Program.cs" Line="17" Column="1" />
-      <File FileName="simpleApp/appsettings.json" Line="1" Column="1" />
-      <File FileName="simpleApp/Properties/launchSettings.json" Line="33" Column="1" />
-      <File FileName="simpleApp/Controllers/StudentsController.cs" Line="24" Column="1" />
-      <File FileName="simpleApp/Student.cs" Line="12" Column="26" />
-      <File FileName="simpleApp/appsettings.Development.json" Line="1" Column="1" />
+      <File FileName="simpleApp/Program.cs" Line="21" Column="11" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
-          <Node name="simpleApp" expanded="True" selected="True">
+          <Node name="simpleApp" expanded="True">
             <Node name="simpleApp" expanded="True">
+              <Node name="Dependencies" expanded="True">
+                <Node name="PackageDependencies" expanded="True" />
+              </Node>
               <Node name="Controllers" expanded="True" />
+              <Node name="Daos" expanded="True" />
+              <Node name="Models" expanded="True" />
               <Node name="Properties" expanded="True" />
-              <Node name="appsettings.json" expanded="True" />
             </Node>
           </Node>
         </State>
@@ -28,8 +27,6 @@
     </Pads>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.ItemProperties.simpleApp PreferredExecutionTarget="/Applications/Google Chrome.app" />
-  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>

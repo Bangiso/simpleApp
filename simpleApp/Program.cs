@@ -20,3 +20,9 @@ app.MapControllers();
 
 app.Run();
 
+app.UseMvc(routes =>
+{
+    routes.MapRoute(
+        name: "default",
+        template: "{controller=Students}/{action=Index}");
+});
