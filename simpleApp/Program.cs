@@ -7,6 +7,7 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllers();
 
 builder.Services.AddScoped<StudentDao, StudentDao>();
+builder.Services.AddSwaggerGen();
 
 var app = builder.Build();
 
@@ -18,11 +19,12 @@ app.UseAuthorization();
 
 app.MapControllers();
 
-app.Run();
-
-app.UseMvc(routes =>
+app.UseSwagger();
+app.UseSwaggerUI();
+app.UseSwaggerUI(options =>
 {
-    routes.MapRoute(
-        name: "default",
-        template: "{controller=Students}/{action=Index}");
+    options.SwaggerEndpoint("/swagger/v1/swagger.json", "v1");
+    options.RoutePrefix = string.Empty;
 });
+
+app.Run();

@@ -23,21 +23,8 @@ namespace simpleApp.Controllers
             _logger = logger;
             _studanetDao = studanetDao;
         }
-        [HttpGet("/")]
-        public ContentResult Index()
-        {
-         return  new ContentResult {
-                                  ContentType = "text/html",
-                                  Content = @"<h1> See the following routes</h1>
-                                  <div> <span style='color:grey;'> GET</span>  /students/all </div>
-                                  <div> <span style='color:grey;'> GET</span> /students/{id} </div>
-                                  <div> <span style='color:grey;'> POST</span> /students   {'id':5,'name':'Leo','gpa':70}'</div>
-                                  <div> <span style='color:grey;'> PUT</span> /students/{id}   {'id':5,'name':'Leo','gpa':70}'</div>
-                                  <div> <span style='color:grey;'> DELETE</span> /students/{id} </div> "
-                              };
-        }
 
-        [HttpGet("all")]
+        [HttpGet]
         public async Task<ActionResult<List<Student>>> Get()
         {
          return  _studanetDao.getStudents();
@@ -72,8 +59,8 @@ namespace simpleApp.Controllers
         [HttpDelete("{id:int}")]
         public async Task<ActionResult> deleteStudent( int id)
         {
-           _logger.LogInformation(_studanetDao.removeStudent(id));
-            return NoContent();
+            _logger.LogInformation(_studanetDao.removeStudent(id));
+            return  NoContent();
         }
     }
 }
